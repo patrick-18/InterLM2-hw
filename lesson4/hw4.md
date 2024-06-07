@@ -145,4 +145,26 @@ xtuner也可以使用merge命令一键完成模型整合：
 
 ![alt text](imgs/对话测试.png)
 
+**web demo部署**
+
+还是仿照前几节课的web demo部署方式，利用streamlit实现。实验发现，将max length设定为微调时的1024，反复调整Top P以及温度后，我们微调得到的模型成功产生了自我认知（Top P和温度是控制生成内容多样性的两个正相关参数）
+
+![alt text](imgs/微调模型webdemo.png)
+
+而原本的1.8B模型不具备自我认知
+
+![alt text](imgs/无自我认知.png)
+
+其实由于这里的Top P以及温度都比较高，生成内容比较多样化，即使是未微调的模型偶尔也会出现自我认知
+
+![alt text](imgs/不微调也有自我认知.png)
+
+### 进阶作业：将自我认知模型上传部署到OpenXLab
+
+comming soon...
+
+### 进阶作业：复现多模态微调
+
+插个眼，有空再弄
+
 
